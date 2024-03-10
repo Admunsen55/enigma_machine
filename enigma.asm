@@ -17,7 +17,6 @@ section .text
 
 ; void rotate_x_positions(int x, int rotor, char config[10][26], int forward);
 rotate_x_positions:
-    ;; DO NOT MODIFY
     push ebp
     mov ebp, esp
     pusha
@@ -26,9 +25,6 @@ rotate_x_positions:
     mov ebx, [ebp + 12] ; rotor
     mov ecx, [ebp + 16] ; config (address of first element in matrix)
     mov edx, [ebp + 20] ; forward
-    ;; DO NOT MODIFY
-    ;; TODO: Implement rotate_x_positions
-    ;; FREESTYLE STARTS HERE
 
     mov esi, ecx
 
@@ -93,12 +89,9 @@ add_rest:
     jl add_rest
 
 no_shifting:
-    ;; FREESTYLE ENDS HERE
-    ;; DO NOT MODIFY
     popa
     leave
     ret
-    ;; DO NOT MODIFY
 
 ; void enigma(char *plain, char key[3], char notches[3], char config[10][26], char *enc);
 enigma:
